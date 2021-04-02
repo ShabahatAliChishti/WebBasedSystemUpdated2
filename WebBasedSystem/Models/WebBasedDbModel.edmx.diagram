@@ -9,15 +9,15 @@
         <EntityTypeShape EntityType="WebBaseSystemModel.Role" Width="1.5" PointX="5.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="WebBaseSystemModel.SpecialistType" Width="1.5" PointX="0.5" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="WebBaseSystemModel.User" Width="1.5" PointX="8.5" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="WebBaseSystemModel.WayPoint" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
         <AssociationConnector Association="WebBaseSystemModel.FK__Users__RoleId__1367E606" ManuallyRouted="false" />
-        <AssociationConnector Association="WebBaseSystemModel.FK__WayPoints__Speci__1B0907CE" ManuallyRouted="false" />
         <EntityTypeShape EntityType="WebBaseSystemModel.sysdiagram" Width="1.5" PointX="8.375" PointY="0.75" />
         <EntityTypeShape EntityType="WebBaseSystemModel.Specialist" Width="1.5" PointX="2.75" PointY="8.875" />
         <EntityTypeShape EntityType="WebBaseSystemModel.SpecialistTypeSubMenu" Width="1.5" PointX="2.75" PointY="1.25" />
         <AssociationConnector Association="WebBaseSystemModel.FK__Notes__Specialis__2E1BDC42" />
         <AssociationConnector Association="WebBaseSystemModel.FK__Specialis__Speci__2F10007B" />
         <AssociationConnector Association="WebBaseSystemModel.FK_SpecialistTypeSubMenu_SpecialistType" />
+        <EntityTypeShape EntityType="WebBaseSystemModel.WayPoint" Width="1.5" PointX="2.75" PointY="4.375" />
+        <AssociationConnector Association="WebBaseSystemModel.FK__WayPoints__Speci__286302EC" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

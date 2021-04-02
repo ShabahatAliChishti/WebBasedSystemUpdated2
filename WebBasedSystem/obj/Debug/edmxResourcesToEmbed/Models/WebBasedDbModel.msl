@@ -45,20 +45,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="WayPoints">
-      <EntityTypeMapping TypeName="WebBaseSystemModel.WayPoint">
-        <MappingFragment StoreEntitySet="WayPoints">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Suburbs" ColumnName="Suburbs" />
-          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="SpecialistTypeId" ColumnName="SpecialistTypeId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="WebBaseSystemModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -96,6 +82,19 @@
           <ScalarProperty Name="SpecialistTypeId" ColumnName="SpecialistTypeId" />
           <ScalarProperty Name="SubMenuName" ColumnName="SubMenuName" />
           <ScalarProperty Name="SubMenuId" ColumnName="SubMenuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WayPoints">
+      <EntityTypeMapping TypeName="WebBaseSystemModel.WayPoint">
+        <MappingFragment StoreEntitySet="WayPoints">
+          <ScalarProperty Name="SpecialistTypeId" ColumnName="SpecialistTypeId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Suburbs" ColumnName="Suburbs" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

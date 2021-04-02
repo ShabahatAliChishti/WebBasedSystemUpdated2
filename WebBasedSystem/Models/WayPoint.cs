@@ -24,8 +24,6 @@ public partial class WayPoint
 
     public Nullable<decimal> Longitude { get; set; }
 
-    public string Country { get; set; }
-
     public string Suburbs { get; set; }
 
     public string PostCode { get; set; }

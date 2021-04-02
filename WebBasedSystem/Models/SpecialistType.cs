@@ -22,11 +22,11 @@ public partial class SpecialistType
     public SpecialistType()
     {
 
-        this.WayPoints = new HashSet<WayPoint>();
-
         this.Specialists = new HashSet<Specialist>();
 
         this.SpecialistTypeSubMenus = new HashSet<SpecialistTypeSubMenu>();
+
+        this.WayPoints = new HashSet<WayPoint>();
 
     }
 
@@ -39,15 +39,15 @@ public partial class SpecialistType
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-    public virtual ICollection<WayPoint> WayPoints { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
     public virtual ICollection<Specialist> Specialists { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<SpecialistTypeSubMenu> SpecialistTypeSubMenus { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<WayPoint> WayPoints { get; set; }
 
 }
 

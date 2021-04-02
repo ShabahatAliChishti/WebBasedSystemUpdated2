@@ -222,3 +222,8 @@ C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\Newtonsoft.Json
 C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\obj\Debug\WebBasedSystem.csprojResolveAssemblyReference.cache
 C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\obj\Debug\WebBasedSystem.dll
 C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\obj\Debug\WebBasedSystem.pdb
+C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\LinqToExcel.dll
+C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\Remotion.Data.Linq.dll
+C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\Remotion.dll
+C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\Remotion.Interfaces.dll
+C:\Users\PC-003\Downloads\nomanupdatedproject\WebBasedSystem\bin\LinqToExcel.xml
