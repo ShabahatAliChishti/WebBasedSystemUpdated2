@@ -1,0 +1,112 @@
+﻿@model WebBasedSystem.ViewModels.SpecialistModel
+@{
+    Layout = "~/Views/Shared/_AdministratorLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/css/ruang-admin.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<style>
+    .row > [class^="col-"] { /* This will grab all the elements with classes that start with "col-" and that are the immediate children of #main-form. */
+        margin-bottom: 20px;
+        /* or the value of your bootstrap's gutter width so that you can have a nice consistent margin between elements*/
+    }
+</style>
+<div class="row">
+    <div class="col-lg-6">
+        <!-- Form Basic -->
+        <div class="card mb-4" style="width:208%;">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Specilaist Form</h6>
+            </div>
+            <div class="card-body">
+                <form id="myFormEdit">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => Model.Title, new { @id = "Title", @class = "form-control", @placeholder = "Title" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.SpecialistName, new { @id = "SpecialistName", @class = "form-control", @placeholder = "Specialist Name" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.MobileNo, new { @id = "MobileNo", @class = "form-control", @placeholder = "Mobile No" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.PhoneNo, new { @id = "PhoneNo", @class = "form-control", @placeholder = "Phone No" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextAreaFor(model => model.Address1, new { @id = "Address1", @class = "form-control", rows = "5", @placeholder = "Address 1" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextAreaFor(model => model.Address2, new { @id = "Address2", @class = "form-control", rows = "5", @placeholder = "Address 2" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.EmailAddress, new { @id = "EmailAddress", @class = "form-control", @placeholder = "Email Address" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.BusinessName, new { @id = "BusinessName", @class = "form-control", @placeholder = "Business Name" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Surname, new { @id = "Surname", @class = "form-control", @placeholder = "Surname" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.OfficeNo, new { @id = "OfficeNo", @class = "form-control", @placeholder = "Office No" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Age, new { @id = "Age", @class = "form-control", @placeholder = "Age" })
+                        </div>
+                        <div class="col-md-6">
+                            @if (ViewBag.CountryList != null)
+                            {
+                                @Html.DropDownListFor(model => model.SpecialistTypeId, ViewBag.CountryList as SelectList, "--Select SpecialistType--", new { @class = "form-control" })
+                            }
+
+                        </div>
+                        <div class="col-md-6">
+                            @Html.DropDownListFor(model => model.SubMenuId, new SelectList(" "), "--Select SubMenu--", new { @class = "form-control" })
+                        </div>
+                        <button id="btnEdit" type="button" class="btn btn-primary" style="margin-left: 15px;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#SpecialistTypeId").change(function () {
+            $.get("/Admin/GetMenuList", { SpecialistTypeId: $("#SpecialistTypeId").val() }, function (data) {
+                $("#SubMenuId").empty();
+                $.each(data, function (index, row) {
+                    $("#SubMenuId").append("<option value='" + row.SubMenuId + "'>" + row.SubMenuName + "</option>")
+                });
+            });
+        });
+
+        $("#btnEdit").click(function () {
+
+
+
+            var myformdataedit = $("#myFormEdit").serialize();
+
+            $.ajax({
+
+
+                type: "POST",
+                url: "/Admin/UpdateSpecialist",
+                data: myformdataedit,
+                success: function () {
+                    console.log(data);
+
+                }
+
+            })
+        })
+    });
+</script>
