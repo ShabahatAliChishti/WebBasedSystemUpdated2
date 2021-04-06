@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -34,9 +36,22 @@ namespace WebBasedSystem.ViewModels
         public Nullable<bool> IsDeleted { get; set; }
 
         public string SubMenu { get; set; }
-        public int Age { get; set; }
+        public Nullable<int> Age { get; set; }
         public int SubMenuId { get; set; }
         public int TitleId { get; set; }
+        public string PostCode { get; set; }
+        public string Suburbs { get; set; }
+        public string State { get; set; }
+        public string NotesDescription { get; set; }
+        public Nullable<bool> TakingNewPatients { get; set; }
+
+[Required]
+[DisplayName("Price")]
+[Range(0.01, 100000.00)]
+        public Nullable<decimal> price { get; set; }
+        public string Waiting_Time { get; set; }
+        public Nullable<bool> IsBooking { get; set; }
+        public int Waiting_Time_Id { get; set; }
 
 
     }

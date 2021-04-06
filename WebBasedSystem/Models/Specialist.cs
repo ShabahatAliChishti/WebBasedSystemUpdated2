@@ -35,6 +35,14 @@ namespace WebBasedSystem.Models
         public Nullable<bool> IsDeleted { get; set; }
         public string SubMenu { get; set; }
         public Nullable<int> Age { get; set; }
+        public string PostCode { get; set; }
+        public string Suburbs { get; set; }
+        public string State { get; set; }
+        public string NotesDescription { get; set; }
+        public Nullable<bool> TakingNewPatients { get; set; }
+        public Nullable<decimal> price { get; set; }
+        public string Waiting_Time { get; set; }
+        public Nullable<bool> IsBooking { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Note> Notes { get; set; }

@@ -27,11 +27,10 @@ namespace WebBasedSystem.Models
     
         public virtual DbSet<Note> Notes { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Specialist> Specialists { get; set; }
         public virtual DbSet<SpecialistType> SpecialistTypes { get; set; }
         public virtual DbSet<SpecialistTypeSubMenu> SpecialistTypeSubMenus { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<WayPoint> WayPoints { get; set; }
+        public virtual DbSet<Specialist> Specialists { get; set; }
     }
 }

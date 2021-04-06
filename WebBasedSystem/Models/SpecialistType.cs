@@ -17,16 +17,16 @@ namespace WebBasedSystem.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SpecialistType()
         {
-            this.Specialists = new HashSet<Specialist>();
             this.SpecialistTypeSubMenus = new HashSet<SpecialistTypeSubMenu>();
+            this.Specialists = new HashSet<Specialist>();
         }
     
         public int SpecialistTypeId { get; set; }
         public string SpecialistTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Specialist> Specialists { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SpecialistTypeSubMenu> SpecialistTypeSubMenus { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Specialist> Specialists { get; set; }
     }
 }
